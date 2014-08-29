@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="author" content="Tima Sadovykh" />
+<meta name="description" content="Pirate Station stream player" />
+<meta property="og:title" content="Pirate Station" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://likvidator22.besaba.com/pirate/" />
+<meta property="og:image" content="http://likvidator22.besaba.com/pirate/img/logo.png" />
+<meta property="og:site_name" content="Pirate Station" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Pirate Station stream player" />
+<meta name="twitter:title" content="Pirate Station" />
+<meta name="twitter:image" content="http://likvidator22.besaba.com/pirate/img/logo.png" />
+
+<link id="favicon" rel="shortcut icon" type="image/png" href="favicon.png" />
+<link href="css/main.css" rel="stylesheet" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script src="js/radio.js"></script>
+<script src="js/share.js"></script>
+
+<title>Pirate Station</title>
+
+<!--[if IE]>
+
+  <meta http-equiv="refresh" content="0;url=ie.html">
+
+<![endif]-->
+
+</head>
+
+<body>
+<header>
+    <div class="responsive-image">
+      <center>
+      <img src="img/logo.png"/>
+      </center>
+    </div>
+  </header>
+<div class="container">
+  <section class="color-1">
+  <p>
+    <div id="jplayer_1" class="jp-jplayer"></div>
+    <div id="jp_container_1" >
+
+      <button id="btn" href="#" class="jp-play" >Воспроизвести</button>
+      <button id="btn" href="#" class="jp-pause" >Остановить</button><br>
+      <input class="jp-volume-bar" id="volume" type="range" min="0" max="100" value="80" /><br>
+       <a href="#" class="jp-mute" ><img id="mute" src="img/mute.png"></a>
+       <a href="#" class="jp-unmute" ><img id="mute" src="img/vol.png"></a>
+  </p>
+    <div class="jp-no-solution">
+          <span>Требуется обновление</span><br>
+          Пожалуйста скачайте <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a> что-бы слушать радио, спасибо!
+    </div>
+</div>
+<div class="track">
+  <div class="bigimage" id="bigimage" style="background-image: url(http://www.radiorecord.ru/player/img/logos/ps.jpg);">
+  <div class="imgcontent" id="imgcontent"></div>
+</div>
+
+<div class="share">
+    <a href="#" class="popup" id="vk" ><img id="social" src="img/social-share/vk.png"></a>
+    <a href="#" class="popup" id="fb"><img id="social" src="img/social-share/fb.png"></a>
+    <a href="#" class="popup" id="tw"><img id="social" src="img/social-share/tw.png"></a>
+    <a href="#" class="popup" id="lj"><img id="social" src="img/social-share/jj3.png"></a>
+    <a href="#" class="popup" id="ok"><img id="social" src="img/social-share/ok.png"></a>
+</div>
+
+<div id="nowtrack">
+  <img class="trackimg" src="img/man.png"/><span id="artist"></span></br>
+  <img class="trackimg" src="img/musical.png"/><span id="title"></span></br>
+
+  <div class="ch">
+   <a target="blank" id="sg" href="#"><img class="search" src="img/google-logo.png"/></a>
+   <a target="blank" id="sn" href="#"><img class="search" src="img/namba-logo.png"/></a>
+  </div>
+
+  <div class="vr">
+  * Внимание! Во время миксов и рекламы информация о текущем треке может не появляться. Обновление информации происходит раз в 5 секунд.
+  </div>
+</div>
+    </section>
+</body>
+</html>
