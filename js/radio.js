@@ -1,7 +1,7 @@
 ﻿$(document).ready(function(){
 
   var stream = {
-    mp3: "http://radio.at.aknet.kg:8008/pirat_station.mp3"
+    mp3: "http://player.vfmradio.ru/stream.ogg"
   },
 
   ready = false;
@@ -33,16 +33,16 @@
 
 
 var oldartist = '1';
-var url = 'http://www.radiorecord.ru/xml/pirate_online_v3.txt'; // урл json
+var url = 'http://player.vfmradio.ru/status-json.xsl'; // урл json
       function update_track_inline() {  // функция обновления текущего трека
         $.getJSON(url, function(data) {
-          var key2 = data.ARTIST + '-' + data.NAME; // собираем
+          var key2 = data.title; // собираем
           $('#sg').attr('href', 'https://www.google.ru/search?q='  + key2); // поиск гугл
           $('#sn').attr('href', 'http://namba.kg/#!/search/mp3/'  + key2); // поиск намба
           $('title').text(key2); // меняем тайтл
           $.each(data, function(key, val) { // берем каждое поле из JSON-ответа
             switch (key) {  // смотрим ключ
-              case 'ARTIST': { $('#nowtrack').children('#artist').html(val); break; } // артисту заполняем поле артиста
+              case 'title': { $('#nowtrack').children('#artist').html(val); break; } // артисту заполняем поле артиста
               case 'NAME': { $('#nowtrack').children('#title').html(val); break; }  // треку заполняем поле названия трека
               case 'image': { // а если картинка
                 if(oldartist!=val) {  // если новая картинка отличается от прошлой
